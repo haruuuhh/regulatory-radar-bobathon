@@ -45,14 +45,13 @@ exactly what you're going to automate.**
 ```bash
 git clone https://github.com/TUM-GDCoC/regulatory-radar-bobathon.git
 cd regulatory-radar-bobathon
-python3 starter.py        # loads the portfolio, runs offline on the sample feed, prints a sample gap+alert
 ```
 
 Then:
 1. Get your **IBM Bob** access (30-day free): https://ibm.biz/student-bobathon
 2. Grab your **Twilio** credit — promo code **`TUM-TWILIO-50`** (for the alert step).
 3. Open this repo in Bob and ask it to read `README.md`, `DATASET_README.md` and `SOURCES.md`, then
-   help you build the pipeline (see [Working with IBM Bob](#-working-with-ibm-bob)).
+   help you **design and build** the pipeline yourself (see [Working with IBM Bob](#-working-with-ibm-bob)).
 
 ## 📦 What's in the repo
 
@@ -62,11 +61,10 @@ Then:
 | `SOURCES.md` | **Start here for rules:** a curated list of live regulatory sources to scrape/query. |
 | `taxonomy.json` | Controlled vocabulary (product categories, substances, regulation families). |
 | `sample_expected_output.json` | The shape of one finding (gap + source + alert) your agent should emit. |
-| `starter.py` | A runnable scaffold: loads the portfolio, a `fetch → assess → alert` skeleton, offline fallback. |
-| `regulatory_updates.json` + `feed/` | **Offline sample / fallback feed** — only for dev or if live scraping fails on the day. |
+| `regulatory_updates.json` + `feed/` | **Examples** of regulatory updates — they show the shape of a rule so you recognise one when you scrape live. Illustrative, not the task and not a dataset to match against. |
 | `DATASET_README.md` | Full field-by-field data dictionary. |
 
-**By the numbers:** 22 companies · 53 products · a curated source list · an offline fallback feed.
+**By the numbers:** 22 companies · 53 products · a curated source list · example regulatory updates.
 Every company and contact is **fabricated and safe** (`@example.com`, placeholder phones) — use your
 **own** Twilio test number/email for the alert demo so nothing reaches a real person.
 
@@ -77,8 +75,8 @@ Every company and contact is **fabricated and safe** (`@example.com`, placeholde
 ### Step 1 — Find the current rules (live)
 Pull **current** EU product requirements from real sources. **`SOURCES.md`** lists good starting
 points (EUR-Lex, ECHA, national EPR registers, EPREL, agency feeds) with tips. Scrape pages, hit
-official APIs/RSS, or read published lists — your call. *(Offline or stuck? Fall back to
-`regulatory_updates.json` / `feed/` — but live is the real thing.)*
+official APIs/RSS, or read published lists — your call. *(Not sure what a rule looks like? Browse the
+**examples** in `regulatory_updates.json` / `feed/` first, then go find the current ones live.)*
 
 ### Step 2 — Understand each rule (use IBM Bob)
 Use **IBM Bob** to read each requirement and extract the facts you need: which product categories /
@@ -106,7 +104,7 @@ number/email. At least one real alert firing in your demo is the wow moment.
 
 | Tier | Who | Do this |
 |------|-----|---------|
-| **Beginner** | New to coding/AI | Use the **offline sample feed** + the `compliance_status` companies: find a known gap and fire one alert. The pipeline end-to-end on easy mode. |
+| **Beginner** | New to coding/AI | Use the **example regulations** + the `compliance_status` companies: find a known gap and fire one alert. The pipeline end-to-end on easy mode. |
 | **Core** (target) | Most teams | Scrape **one or two live sources**, use Bob to extract the rule, assess several portfolio companies for gaps, fire real alerts. The full loop on live data. |
 | **Stretch** | Strong teams | Cover more regulations, add a **risk dashboard**, de-duplicate across sources, prioritise by deadline, multi-language alerts, or an audit log of "rule → source → company → action". |
 
@@ -158,8 +156,9 @@ gap**, and a **real alert**, and explain your reasoning.
 
 ## ❓ FAQ
 
-- **Do we have to scrape live?** That's the goal, but if a site is hard or Wi-Fi fails, fall back to
-  `regulatory_updates.json` / `feed/`. Don't get stuck — a working loop matters more.
+- **Do we have to scrape live?** That's the goal. The `regulatory_updates.json` / `feed/` files are
+  **examples** of what rules look like — use them to learn the format, but the task is to pull the
+  current ones from live sources.
 - **How do we know a company is non-compliant?** You reason from the product's attributes against the
   rule. A few companies have an explicit `compliance_status` to make gaps concrete; for the rest you assess.
 - **Do alerts have to be real?** Aim for at least one real notification in the demo. Twilio makes it trivial.
@@ -174,12 +173,11 @@ regulatory-radar/
 ├── README.md                  ← you are here (the whole challenge)
 ├── SOURCES.md                 ← where to get current regulations (start here for rules)
 ├── DATASET_README.md          ← full data dictionary
-├── starter.py                 ← runnable scaffold (offline fallback included)
 ├── partners.json / .csv       ← the SME portfolio (your fixed dataset)
 ├── taxonomy.json              ← controlled vocabulary
 ├── sample_expected_output.json← the output shape (one finding)
-├── regulatory_updates.json    ← offline sample / fallback feed
-├── feed/                      ← offline sample HTML pages
+├── regulatory_updates.json    ← example regulatory updates (illustrative)
+├── feed/                      ← the same examples, rendered as HTML
 └── dataset_stats.json
 ```
 

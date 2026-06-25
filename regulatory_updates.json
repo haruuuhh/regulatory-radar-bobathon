@@ -1,5 +1,5 @@
 {
-  "_comment": "OFFLINE SAMPLE / FALLBACK feed. The real task is to pull CURRENT requirements from live sources (see SOURCES.md). Use this only to develop offline or if live scraping fails on the day.",
+  "_comment": "EXAMPLES of regulatory updates - they show the shape of a rule (family, summary, deadline, scope) so you recognise one when you pull CURRENT requirements from live sources (see SOURCES.md). Illustrative only - not the task and not a dataset to match against.",
   "updates": [
     {
       "update_id": "REG-26-001",

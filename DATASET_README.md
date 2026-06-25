@@ -16,8 +16,8 @@ numbers, so test alerts never reach a real person. Use your **own** Twilio test 
 | `partners.csv` | The same portfolio, one row per product, for spreadsheets. |
 | `taxonomy.json` | Controlled vocabulary: product categories, substances, regulation families. |
 | `sample_expected_output.json` | The shape of one finding (gap + source + alert) - what your agent should emit. |
-| `regulatory_updates.json` | **Offline sample / fallback feed** (50 example updates). NOT the task - use it only to develop offline or if live scraping fails. |
-| `feed/` | 10 sample HTML notices to practise scraping/ingestion against, offline. |
+| `regulatory_updates.json` | **Examples** (50) of regulatory updates - they show the shape of a rule so you recognise one when you scrape live. Illustrative, not the task and not a dataset to match against. |
+| `feed/` | 10 of the same examples rendered as HTML notices, so you see what a real page looks like. |
 | `dataset_stats.json` | Summary counts. |
 
 ## The portfolio (`partners.json`)
@@ -50,11 +50,12 @@ right category but wrong market, a substance that isn't actually present, or an 
 a product out of scope (e.g. a passport rule that hits industrial batteries but not portable ones).
 Cite the source you used for every gap.
 
-## The offline sample feed (`regulatory_updates.json` + `feed/`)
+## Example regulatory updates (`regulatory_updates.json` + `feed/`)
 
-This is a **fallback**, not the task. The real signal is the live web (see SOURCES.md). The sample is
-deliberately messy - it mixes in unrelated-domain noise and duplicate/correction entries (`corrects`
-field) - so even offline you practise filtering and de-duplication. Each entry has a free-text
-`summary` plus a `scope` block (categories / substances / markets / conditions).
+These are **examples** - they show you the shape of a regulatory update so you recognise one when you
+pull current rules from live sources. They are illustrative, **not the task and not a dataset to match
+against**. The set is deliberately varied - it mixes in unrelated-domain entries and
+duplicate/correction entries (`corrects` field) - so you also see what noise looks like. Each example
+has a free-text `summary` plus a `scope` block (categories / substances / markets / conditions).
 
 *The portfolio is generated from a maintainer script and is intentionally synthetic.*
