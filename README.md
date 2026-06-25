@@ -43,7 +43,7 @@ exactly what you're going to automate.**
 ## 🚀 Quickstart
 
 ```bash
-git clone https://github.com/shubham-mw/regulatory-radar-bobathon.git
+git clone https://github.com/TUM-GDCoC/regulatory-radar-bobathon.git
 cd regulatory-radar-bobathon
 python3 starter.py        # loads the portfolio, runs offline on the sample feed, prints a sample gap+alert
 ```
