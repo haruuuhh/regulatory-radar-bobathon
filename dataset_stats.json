@@ -1,0 +1,19 @@
+{
+  "partners": 22,
+  "products": 53,
+  "updates": 50,
+  "noise_updates": 6,
+  "duplicate_or_correction_updates": 6,
+  "substantive_updates": 44,
+  "affected_pairs_total": 524,
+  "near_miss_pairs_total": 76,
+  "zero_affected_substantive_updates": [
+    "REG-26-005",
+    "REG-26-042"
+  ],
+  "partners_never_affected": [],
+  "deadline_range": [
+    "2024-12-13",
+    "2028-08-18"
+  ]
+}

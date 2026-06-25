@@ -1,0 +1,10 @@
+# ⚠️ Never publish the answer key OR the generator (it can recreate the key). Keep these private.
+jury/
+build_dataset.py
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
