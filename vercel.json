@@ -2,6 +2,7 @@
   "version": 2,
   "outputDirectory": "public",
   "rewrites": [
+    { "source": "/upload", "destination": "/upload.html" },
     { "source": "/api/:path*", "destination": "/api/:path*" }
   ]
 }
