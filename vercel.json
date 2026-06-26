@@ -1,11 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/**/*.js", "use": "@vercel/node" },
-    { "src": "pipeline/dashboard.html", "use": "@vercel/static" }
-  ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/upload", "dest": "/pipeline/upload.html" },
     { "src": "/dashboard", "dest": "/pipeline/dashboard.html" },
     { "src": "/", "dest": "/pipeline/dashboard.html" }
