@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regulatory Radar — Upload &amp; Scan</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; background: #f7f8fa; color: #1f2328; }
+a { color: #3b82d4; }
+.topbar { background: #1f2328; color: #fff; display: flex; align-items: center; gap: 16px; padding: 0 24px; height: 48px; }
+.topbar-brand { font-weight: 700; font-size: 15px; }
+.topbar-links { display: flex; gap: 16px; font-size: 13px; }
+.topbar-links a { color: #c9d1d9; text-decoration: none; }
+.topbar-links a:hover { color: #fff; }
+.page { max-width: 820px; margin: 0 auto; padding: 32px 24px 80px; }
+h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.sub { color: #57606a; font-size: 13px; margin-bottom: 28px; }
+.panel { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; margin-bottom: 20px; }
+.panel-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #57606a; margin-bottom: 16px; }
+
+/* drop zone */
+.dropzone { border: 2px dashed #e5e7eb; border-radius: 8px; padding: 40px 24px; text-align: center; cursor: pointer; transition: border-color .15s, background .15s; }
+.dropzone:hover, .dropzone.over { border-color: #3b82d4; background: #eff6ff; }
+.dropzone input[type=file] { display: none; }
+.dz-icon { font-size: 36px; margin-bottom: 10px; }
+.dz-label { font-size: 15px; font-weight: 600; color: #1f2328; }
+.dz-sub { font-size: 12px; color: #57606a; margin-top: 4px; }
+.dz-filename { margin-top: 12px; font-size: 13px; font-weight: 600; color: #3b82d4; display: none; }
+
+/* options */
+.options { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 16px; }
+.toggle-row { display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer; }
+.toggle-row input { width: 16px; height: 16px; cursor: pointer; }
+
+/* button */
+.btn { padding: 10px 24px; background: #3b82d4; color: #fff; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; }
+.btn:hover { background: #2563eb; }
+.btn:disabled { background: #9ca3af; cursor: not-allowed; }
+.btn-sm { padding: 5px 14px; font-size: 12px; border-radius: 5px; }
+
+/* status bar */
+.status { padding: 10px 14px; border-radius: 6px; font-size: 13px; margin-bottom: 16px; display: none; }
+.status.info  { background: #dbeafe; color: #1e40af; }
+.status.ok    { background: #d1fae5; color: #065f46; }
+.status.error { background: #fee2e2; color: #991b1b; }
+
+/* results */
+.cards { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; flex: 1; min-width: 110px; }
+.card-num { font-size: 26px; font-weight: 700; }
+.card-lbl { font-size: 12px; color: #57606a; }
+.card-danger .card-num { color: #dc2626; }
+.card-warn   .card-num { color: #d97706; }
+.card-ok     .card-num { color: #16a34a; }
+
+/* table */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th { background: #f7f8fa; text-align: left; padding: 8px 10px; font-weight: 600; border-bottom: 2px solid #e5e7eb; white-space: nowrap; }
+tbody td { padding: 8px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+tbody tr:hover td { background: #fafbfc; }
+.row-high   td:first-child { border-left: 3px solid #dc2626; }
+.row-medium td:first-child { border-left: 3px solid #d97706; }
+.badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; white-space: nowrap; }
+.high   { background: #fee2e2; color: #991b1b; }
+.medium { background: #fef3c7; color: #92400e; }
+.low    { background: #dbeafe; color: #1e40af; }
+.td-gap { max-width: 220px; font-size: 12px; }
+.td-action { max-width: 180px; font-size: 12px; color: #57606a; }
+.td-dl .past { color: #dc2626; font-weight: 600; }
+.td-dl .soon { color: #d97706; font-weight: 600; }
+.source-link { color: #3b82d4; font-size: 12px; text-decoration: none; white-space: nowrap; }
+.source-link:hover { text-decoration: underline; }
+.muted { color: #57606a; }
+.empty { padding: 32px; text-align: center; color: #57606a; }
+
+/* alerts log */
+.alert-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.alert-ok   { color: #16a34a; font-weight: 700; }
+.alert-err  { color: #dc2626; font-weight: 700; }
+.alert-skip { color: #57606a; }
+
+/* download btn */
+.dl-row { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+
+footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 12px; color: #57606a; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <span class="topbar-brand">🛰️ Regulatory Radar</span>
+  <nav class="topbar-links">
+    <a href="/">Dashboard</a>
+    <a href="/upload" style="color:#fff;font-weight:600">Upload &amp; Scan</a>
+  </nav>
+</header>
+
+<div class="page">
+  <h1>Upload &amp; Scan</h1>
+  <p class="sub">Drop a <code>partners.json</code> or <code>partners.csv</code> file to detect EU compliance gaps instantly.</p>
+
+  <!-- upload panel -->
+  <div class="panel">
+    <div class="panel-title">Company File</div>
+    <div class="dropzone" id="dropzone">
+      <input type="file" id="file-input" accept=".json,.csv,application/json,text/csv,text/plain">
+      <div class="dz-icon">📂</div>
+      <div class="dz-label">Drop JSON or CSV here</div>
+      <div class="dz-sub">or click to browse — max 2 MB</div>
+      <div class="dz-filename" id="dz-filename"></div>
+    </div>
+
+    <div class="options">
+      <label class="toggle-row">
+        <input type="checkbox" id="chk-alert">
+        <span>Send Twilio alert after scan</span>
+      </label>
+      <button class="btn" id="btn-scan" disabled>Scan for gaps →</button>
+    </div>
+  </div>
+
+  <!-- status -->
+  <div class="status" id="status"></div>
+
+  <!-- results (hidden until scan) -->
+  <div id="results" style="display:none">
+    <div class="cards" id="result-cards"></div>
+
+    <div class="panel">
+      <div class="panel-title">Compliance Gaps</div>
+      <div class="dl-row">
+        <button class="btn btn-sm" id="btn-download">⬇ Download findings.json</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th>Sev.</th><th>Company</th><th>Product</th>
+            <th>Regulation</th><th>Gap</th><th>Deadline</th><th>Action</th><th>Source</th>
+          </tr></thead>
+          <tbody id="result-tbody"></tbody>
+        </table>
+        <div id="result-empty" class="empty" style="display:none">✅ No compliance gaps detected.</div>
+      </div>
+    </div>
+
+    <div class="panel" id="alerts-panel" style="display:none">
+      <div class="panel-title">Alert Log</div>
+      <div id="alerts-log"></div>
+    </div>
+  </div>
+
+  <!-- format guide -->
+  <div class="panel">
+    <div class="panel-title">Expected File Format</div>
+    <p style="margin-bottom:10px;font-size:13px">Your file must describe one or more companies and their products. Minimal required fields:</p>
+    <pre style="background:#f7f8fa;border:1px solid #e5e7eb;border-radius:6px;padding:14px;font-size:12px;overflow-x:auto">{
+  "partners": [
+    {
+      "partner_id": "P001",
+      "company": "My Company GmbH",
+      "hq_country": "DE",
+      "sells_in": ["EU"],
+      "contact": { "name": "Compliance", "email": "you@example.com",
+                   "phone": "+491700000000", "preferred_channel": "sms" },
+      "products": [
+        {
+          "product_id": "P001-A",
+          "name": "Smart Speaker",
+          "category": "audio",
+          "substances": ["BPA"],
+          "has_battery": true,
+          "battery_type": "portable",
+          "battery_capacity_wh": 12,
+          "has_radio": true,
+          "connector": "micro_usb",
+          "packaging": ["cardboard"],
+          "intended_use": "consumer",
+          "markets": ["EU"]
+        }
+      ]
+    }
+  ]
+}</pre>
+    <p style="margin-top:10px;font-size:12px;color:#57606a">
+      CSV: one row per product. Required columns: <code>partner_id, company, product_id, product_name, category, substances (pipe-separated), has_battery, battery_type, battery_capacity_wh, has_radio, connector, packaging, intended_use, markets, preferred_channel</code>
+    </p>
+    <p style="margin-top:6px;font-size:12px;color:#57606a">
+      Valid categories: <code>led_lighting · power_supply · battery_pack · audio · smart_home · wearable · medical_wearable · toy_electronic · cable · display · iot_module · pv_inverter · emobility_battery · networking · appliance · printer_3d · drone</code>
+    </p>
+  </div>
+</div>
+
+<footer>Made with IBM Bob</footer>
+
+<script>
+const API = '/api/assess';
+let fileContent = null;
+let fileType = null;
+let lastFindings = null;
+
+// ── drag-and-drop ─────────────────────────────────────────────────────────────
+const dz = document.getElementById('dropzone');
+const fi = document.getElementById('file-input');
+const fnLabel = document.getElementById('dz-filename');
+const btnScan = document.getElementById('btn-scan');
+
+dz.addEventListener('click', () => fi.click());
+dz.addEventListener('dragover', (e) => { e.preventDefault(); dz.classList.add('over'); });
+dz.addEventListener('dragleave', () => dz.classList.remove('over'));
+dz.addEventListener('drop', (e) => { e.preventDefault(); dz.classList.remove('over'); loadFile(e.dataTransfer.files[0]); });
+fi.addEventListener('change', () => fi.files[0] && loadFile(fi.files[0]));
+
+function loadFile(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    fileContent = e.target.result;
+    fileType = file.name.endsWith('.csv') ? 'csv' : 'json';
+    fnLabel.textContent = `📄 ${file.name} (${(file.size/1024).toFixed(1)} KB)`;
+    fnLabel.style.display = 'block';
+    btnScan.disabled = false;
+    setStatus('');
+    document.getElementById('results').style.display = 'none';
+  };
+  reader.readAsText(file);
+}
+
+// ── scan ──────────────────────────────────────────────────────────────────────
+btnScan.addEventListener('click', async () => {
+  if (!fileContent) return;
+  const withAlert = document.getElementById('chk-alert').checked;
+  const url = API + (withAlert ? '?alert=true' : '');
+
+  btnScan.disabled = true;
+  setStatus('Scanning…', 'info');
+
+  try {
+    const contentType = fileType === 'csv' ? 'text/csv' : 'application/json';
+    const body = fileType === 'csv' ? fileContent : fileContent;
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': contentType },
+      body,
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+
+    lastFindings = data;
+    renderResults(data);
+    setStatus(`✅ Scan complete — ${data.finding_count} gap(s) found across ${data.partner_count} company/${data.product_count} products.`, 'ok');
+  } catch (err) {
+    setStatus(`❌ ${err.message}`, 'error');
+  } finally {
+    btnScan.disabled = false;
+  }
+});
+
+// ── render results ────────────────────────────────────────────────────────────
+function renderResults(data) {
+  const findings = data.findings ?? [];
+  const high   = findings.filter(f => f.severity === 'high').length;
+  const medium = findings.filter(f => f.severity === 'medium').length;
+
+  document.getElementById('result-cards').innerHTML = `
+    <div class="card ${high>0?'card-danger':'card-ok'}"><div class="card-num">${high}</div><div class="card-lbl">High severity</div></div>
+    <div class="card ${medium>0?'card-warn':'card-ok'}"><div class="card-num">${medium}</div><div class="card-lbl">Medium severity</div></div>
+    <div class="card"><div class="card-num">${findings.length}</div><div class="card-lbl">Total gaps</div></div>
+    <div class="card"><div class="card-num">${data.partner_count ?? '?'}</div><div class="card-lbl">Companies</div></div>
+    <div class="card"><div class="card-num">${data.product_count ?? '?'}</div><div class="card-lbl">Products</div></div>`;
+
+  const tbody = document.getElementById('result-tbody');
+  const empty = document.getElementById('result-empty');
+
+  if (!findings.length) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+  } else {
+    empty.style.display = 'none';
+    tbody.innerHTML = findings.map(f => `<tr class="row-${f.severity}">
+      <td><span class="badge ${f.severity}">${f.severity.toUpperCase()}</span></td>
+      <td style="white-space:nowrap;font-size:12px">${f.company}</td>
+      <td style="white-space:nowrap;font-size:12px;font-weight:600">${f.product}</td>
+      <td style="white-space:nowrap;font-size:12px;font-weight:600">${regFam(f.regulation)}</td>
+      <td class="td-gap">${f.gap}</td>
+      <td class="td-dl">${f.deadline ? fmtDl(f.deadline) : '<span class="muted">In force</span>'}</td>
+      <td class="td-action">${f.recommended_action}</td>
+      <td><a href="${f.source_url}" target="_blank" rel="noopener" class="source-link">↗</a></td>
+    </tr>`).join('');
+  }
+
+  // alerts log
+  if (data.alerts_fired?.length) {
+    const ap = document.getElementById('alerts-panel');
+    ap.style.display = 'block';
+    document.getElementById('alerts-log').innerHTML = data.alerts_fired.map(a => `
+      <div class="alert-row">
+        <span class="${a.status==='error'?'alert-err':a.status==='skipped'?'alert-skip':'alert-ok'}">${a.status==='error'?'✗':a.status==='skipped'?'–':'✓'}</span>
+        <span>${a.company ?? ''}</span>
+        <span class="muted">${a.sid ?? a.reason ?? a.error ?? ''}</span>
+      </div>`).join('');
+  }
+
+  document.getElementById('results').style.display = 'block';
+}
+
+// ── download ──────────────────────────────────────────────────────────────────
+document.getElementById('btn-download').addEventListener('click', () => {
+  if (!lastFindings) return;
+  const blob = new Blob([JSON.stringify(lastFindings, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'findings.json';
+  a.click();
+});
+
+// ── helpers ───────────────────────────────────────────────────────────────────
+function setStatus(msg, type) {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  el.className = 'status' + (type ? ' ' + type : '');
+  el.style.display = msg ? 'block' : 'none';
+}
+
+function regFam(reg) {
+  const m = reg.match(/^([^—\[]+)/);
+  return m ? m[1].trim() : reg.slice(0,25);
+}
+
+function fmtDl(d) {
+  const dt = new Date(d), now = new Date();
+  const days = Math.ceil((dt - now) / 86400000);
+  const s = dt.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' });
+  if (days < 0)   return `<span class="past">${s}</span>`;
+  if (days < 180) return `<span class="soon">${s} (${days}d)</span>`;
+  return s;
+}
+</script>
+</body>
+</html>
