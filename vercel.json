@@ -10,11 +10,4 @@
     { "src": "/dashboard", "dest": "/pipeline/dashboard.html" },
     { "src": "/", "dest": "/pipeline/dashboard.html" }
   ],
-  "env": {
-    "TWILIO_ACCOUNT_SID": "@twilio_account_sid",
-    "TWILIO_AUTH_TOKEN": "@twilio_auth_token",
-    "TWILIO_FROM_SMS": "@twilio_from_sms",
-    "TWILIO_FROM_WHATSAPP": "@twilio_from_whatsapp",
-    "ALERT_TARGET_PHONE": "@alert_target_phone"
-  }
 }
