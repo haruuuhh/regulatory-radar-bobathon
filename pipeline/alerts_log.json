@@ -1,0 +1,142 @@
+[
+  {
+    "partner_id": "P005",
+    "company": "HomePulse Smart GmbH",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P022",
+    "company": "KidVision Cams SARL",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P004",
+    "company": "SonicWave Audio SARL",
+    "channel": "whatsapp",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P006",
+    "company": "FitTrack Wearables AB",
+    "channel": "sms",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P014",
+    "company": "NetLink Systems Sp. z o.o.",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P017",
+    "company": "AeroSense Drones SARL",
+    "channel": "whatsapp",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P008",
+    "company": "PlayBright Toys S.r.l.",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P019",
+    "company": "GlowToys Junior Sp. z o.o.",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P003",
+    "company": "CellCore Energy Sp. z o.o.",
+    "channel": "sms",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P013",
+    "company": "RideVolt Mobility GmbH",
+    "channel": "sms",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P021",
+    "company": "NomadPower Outdoor AB",
+    "channel": "sms",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P001",
+    "company": "LumaNord Lighting GmbH",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P007",
+    "company": "MediBand Health AG",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P009",
+    "company": "CableMax Connect S.L.",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P010",
+    "company": "DisplayOne Visuals GmbH",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P011",
+    "company": "GridSense IoT BV",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P012",
+    "company": "SolarMicro Tech S.L.",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P020",
+    "company": "ThermoControl Industrie GmbH",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P015",
+    "company": "BrewEasy Appliances S.r.l.",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  },
+  {
+    "partner_id": "P018",
+    "company": "PureAir Devices BV",
+    "channel": "email",
+    "status": "skipped",
+    "reason": "no target"
+  }
+]

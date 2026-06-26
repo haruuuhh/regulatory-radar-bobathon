@@ -7,3 +7,9 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+
+# Pipeline
+pipeline/node_modules/
+pipeline/.env
+pipeline/.DS_Store
+.DS_Store

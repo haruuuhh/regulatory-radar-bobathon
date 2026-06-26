@@ -1,0 +1,1318 @@
+{
+  "_comment": "Gap findings produced by assess_gaps.js. Each record matches sample_expected_output.json. Replace __ALERT_TARGET__ with your own Twilio test number/email before alerting.",
+  "assessed_at": "2026-06-26T10:26:54.514Z",
+  "finding_count": 57,
+  "findings": [
+    {
+      "company": "HomePulse Smart GmbH",
+      "partner_id": "P005",
+      "product_id": "P005-B",
+      "product": "HomeHub Controller",
+      "regulation": "RED — USB-C common charger mandatory for portable consumer electronics [Directive 2014/53/EU, amended by Delegated Regulation (EU) 2022/2380 — common charger]",
+      "requirement": "From 28 December 2024, small portable consumer electronics (phones, tablets, cameras, headphones, portable speakers, handheld game consoles, e-readers) sold in the EU must use USB-C for wired charging.",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302553",
+      "gap": "HomeHub Controller uses \"micro_usb\" connector — USB-C is now mandatory for in-scope consumer devices in the EU since 28 Dec 2024.",
+      "deadline": "2024-12-28",
+      "severity": "high",
+      "recommended_action": "Replace micro-USB or proprietary charging ports with USB-C on all in-scope products.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "HomePulse Smart GmbH: HomeHub Controller — RED gap by 2024-12-28. Replace micro-USB or proprietary charging ports with USB-C on all in-scope produ Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302553"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-A",
+      "product": "LittleView Baby Monitor",
+      "regulation": "RED — USB-C common charger mandatory for portable consumer electronics [Directive 2014/53/EU, amended by Delegated Regulation (EU) 2022/2380 — common charger]",
+      "requirement": "From 28 December 2024, small portable consumer electronics (phones, tablets, cameras, headphones, portable speakers, handheld game consoles, e-readers) sold in the EU must use USB-C for wired charging.",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302553",
+      "gap": "LittleView Baby Monitor uses \"micro_usb\" connector — USB-C is now mandatory for in-scope consumer devices in the EU since 28 Dec 2024.",
+      "deadline": "2024-12-28",
+      "severity": "high",
+      "recommended_action": "Replace micro-USB or proprietary charging ports with USB-C on all in-scope products.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: LittleView Baby Monitor — RED gap by 2024-12-28. Replace micro-USB or proprietary charging ports with USB-C on all in-scope produ Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302553"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "SonicWave Audio SARL",
+      "partner_id": "P004",
+      "product_id": "P004-A",
+      "product": "WaveGo Bluetooth Speaker",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "WaveGo Bluetooth Speaker is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "SonicWave Audio SARL: WaveGo Bluetooth Speaker — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "SonicWave Audio SARL",
+      "partner_id": "P004",
+      "product_id": "P004-B",
+      "product": "StudioPods Headphones",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "StudioPods Headphones is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "SonicWave Audio SARL: StudioPods Headphones — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "SonicWave Audio SARL",
+      "partner_id": "P004",
+      "product_id": "P004-C",
+      "product": "WaveHome Soundbar",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "WaveHome Soundbar is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "SonicWave Audio SARL: WaveHome Soundbar — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "HomePulse Smart GmbH",
+      "partner_id": "P005",
+      "product_id": "P005-A",
+      "product": "MotionSense Sensor",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "MotionSense Sensor is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "HomePulse Smart GmbH: MotionSense Sensor — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "HomePulse Smart GmbH",
+      "partner_id": "P005",
+      "product_id": "P005-B",
+      "product": "HomeHub Controller",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "HomeHub Controller is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "HomePulse Smart GmbH: HomeHub Controller — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "HomePulse Smart GmbH",
+      "partner_id": "P005",
+      "product_id": "P005-C",
+      "product": "PlugSense Smart Plug",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "PlugSense Smart Plug is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "HomePulse Smart GmbH: PlugSense Smart Plug — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "FitTrack Wearables AB",
+      "partner_id": "P006",
+      "product_id": "P006-A",
+      "product": "PulseBand Activity Tracker",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "PulseBand Activity Tracker is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "FitTrack Wearables AB: PulseBand Activity Tracker — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "FitTrack Wearables AB",
+      "partner_id": "P006",
+      "product_id": "P006-B",
+      "product": "SportWatch GPS",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "SportWatch GPS is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "FitTrack Wearables AB: SportWatch GPS — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "NetLink Systems Sp. z o.o.",
+      "partner_id": "P014",
+      "product_id": "P014-A",
+      "product": "AirLink Wi-Fi 6 Router",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "AirLink Wi-Fi 6 Router is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "NetLink Systems Sp. z o.o.: AirLink Wi-Fi 6 Router — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "NetLink Systems Sp. z o.o.",
+      "partner_id": "P014",
+      "product_id": "P014-B",
+      "product": "MeshPoint Mini",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "MeshPoint Mini is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "NetLink Systems Sp. z o.o.: MeshPoint Mini — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "AeroSense Drones SARL",
+      "partner_id": "P017",
+      "product_id": "P017-A",
+      "product": "SkyScout Camera Drone",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "SkyScout Camera Drone is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "AeroSense Drones SARL: SkyScout Camera Drone — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "AeroSense Drones SARL",
+      "partner_id": "P017",
+      "product_id": "P017-B",
+      "product": "MicroDrone Mini",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "MicroDrone Mini is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "AeroSense Drones SARL: MicroDrone Mini — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-A",
+      "product": "LittleView Baby Monitor",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "LittleView Baby Monitor is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: LittleView Baby Monitor — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-B",
+      "product": "KidCam Watch",
+      "regulation": "RED — cybersecurity requirements (EN 18031) for internet-connected devices [Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30]",
+      "requirement": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "gap": "KidCam Watch is an internet-connected consumer radio device; no documented EN 18031 cybersecurity conformity assessment found.",
+      "deadline": "2025-08-01",
+      "severity": "high",
+      "recommended_action": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: KidCam Watch — RED gap by 2025-08-01. Conduct EN 18031 conformity assessment and update DoC / technical file before Au Source: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "HomePulse Smart GmbH",
+      "partner_id": "P005",
+      "product_id": "P005-A",
+      "product": "MotionSense Sensor",
+      "regulation": "Battery Regulation — button cell compartments must be child-safe (Aug 2026) [Regulation (EU) 2023/1542, Article 12 — button cell child safety]",
+      "requirement": "From 18 August 2026, consumer appliances containing button-cell or coin batteries must have battery compartments that are not accessible to children without a tool or two simultaneous actions.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "MotionSense Sensor contains a button-cell battery accessible without a tool or double-action — non-compliant with Battery Reg Art. 12 from Aug 2026.",
+      "deadline": "2026-08-18",
+      "severity": "high",
+      "recommended_action": "Redesign battery compartment closure (tool/double-action lock) and add required warning label.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "HomePulse Smart GmbH: MotionSense Sensor — Battery gap by 2026-08-18. Redesign battery compartment closure (tool/double-action lock) and add required  Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "PlayBright Toys S.r.l.",
+      "partner_id": "P008",
+      "product_id": "P008-B",
+      "product": "SingAlong Karaoke Mic",
+      "regulation": "Battery Regulation — button cell compartments must be child-safe (Aug 2026) [Regulation (EU) 2023/1542, Article 12 — button cell child safety]",
+      "requirement": "From 18 August 2026, consumer appliances containing button-cell or coin batteries must have battery compartments that are not accessible to children without a tool or two simultaneous actions.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "SingAlong Karaoke Mic contains a button-cell battery accessible without a tool or double-action — non-compliant with Battery Reg Art. 12 from Aug 2026.",
+      "deadline": "2026-08-18",
+      "severity": "high",
+      "recommended_action": "Redesign battery compartment closure (tool/double-action lock) and add required warning label.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "PlayBright Toys S.r.l.: SingAlong Karaoke Mic — Battery gap by 2026-08-18. Redesign battery compartment closure (tool/double-action lock) and add required  Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "GlowToys Junior Sp. z o.o.",
+      "partner_id": "P019",
+      "product_id": "P019-A",
+      "product": "StarLite Night Toy",
+      "regulation": "Battery Regulation — button cell compartments must be child-safe (Aug 2026) [Regulation (EU) 2023/1542, Article 12 — button cell child safety]",
+      "requirement": "From 18 August 2026, consumer appliances containing button-cell or coin batteries must have battery compartments that are not accessible to children without a tool or two simultaneous actions.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "StarLite Night Toy contains a button-cell battery accessible without a tool or double-action — non-compliant with Battery Reg Art. 12 from Aug 2026.",
+      "deadline": "2026-08-18",
+      "severity": "high",
+      "recommended_action": "Redesign battery compartment closure (tool/double-action lock) and add required warning label.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "GlowToys Junior Sp. z o.o.: StarLite Night Toy — Battery gap by 2026-08-18. Redesign battery compartment closure (tool/double-action lock) and add required  Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "GlowToys Junior Sp. z o.o.",
+      "partner_id": "P019",
+      "product_id": "P019-B",
+      "product": "MelodyPlush Toy",
+      "regulation": "Battery Regulation — button cell compartments must be child-safe (Aug 2026) [Regulation (EU) 2023/1542, Article 12 — button cell child safety]",
+      "requirement": "From 18 August 2026, consumer appliances containing button-cell or coin batteries must have battery compartments that are not accessible to children without a tool or two simultaneous actions.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "MelodyPlush Toy contains a button-cell battery accessible without a tool or double-action — non-compliant with Battery Reg Art. 12 from Aug 2026.",
+      "deadline": "2026-08-18",
+      "severity": "high",
+      "recommended_action": "Redesign battery compartment closure (tool/double-action lock) and add required warning label.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "GlowToys Junior Sp. z o.o.: MelodyPlush Toy — Battery gap by 2026-08-18. Redesign battery compartment closure (tool/double-action lock) and add required  Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "CellCore Energy Sp. z o.o.",
+      "partner_id": "P003",
+      "product_id": "P003-B",
+      "product": "IndusCell 2.5kWh Module",
+      "regulation": "Battery Regulation — industrial battery passport (deadline 18 Feb 2027) [Regulation (EU) 2023/1542, Article 77]",
+      "requirement": "Industrial batteries with a capacity > 2 kWh placed on the EU market on or after 18 February 2027 must carry a digital battery passport.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "Industrial battery (2500 Wh, IndusCell 2.5kWh Module) sold in the EU without a digital battery passport.",
+      "deadline": "2027-02-18",
+      "severity": "high",
+      "recommended_action": "Create and register the battery passport data carrier before the deadline.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "CellCore Energy Sp. z o.o.: IndusCell 2.5kWh Module — Battery gap by 2027-02-18. Create and register the battery passport data carrier before the deadline. Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "RideVolt Mobility GmbH",
+      "partner_id": "P013",
+      "product_id": "P013-A",
+      "product": "e-Scooter Battery Pack 280Wh",
+      "regulation": "Battery Regulation — LMT battery passport (deadline 18 Feb 2027) [Regulation (EU) 2023/1542, Article 77]",
+      "requirement": "Light-means-of-transport (LMT) batteries (e-bikes, e-scooters, etc.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "LMT battery (e-Scooter Battery Pack 280Wh) sold in the EU without a digital battery passport / data carrier (QR code).",
+      "deadline": "2027-02-18",
+      "severity": "high",
+      "recommended_action": "Create and register the battery passport data carrier before the deadline.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "RideVolt Mobility GmbH: e-Scooter Battery Pack 280Wh — Battery gap by 2027-02-18. Create and register the battery passport data carrier before the deadline. Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "RideVolt Mobility GmbH",
+      "partner_id": "P013",
+      "product_id": "P013-B",
+      "product": "eBike Battery 504Wh",
+      "regulation": "Battery Regulation — LMT battery passport (deadline 18 Feb 2027) [Regulation (EU) 2023/1542, Article 77]",
+      "requirement": "Light-means-of-transport (LMT) batteries (e-bikes, e-scooters, etc.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "LMT battery (eBike Battery 504Wh) sold in the EU without a digital battery passport / data carrier (QR code).",
+      "deadline": "2027-02-18",
+      "severity": "high",
+      "recommended_action": "Create and register the battery passport data carrier before the deadline.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "RideVolt Mobility GmbH: eBike Battery 504Wh — Battery gap by 2027-02-18. Create and register the battery passport data carrier before the deadline. Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "NomadPower Outdoor AB",
+      "partner_id": "P021",
+      "product_id": "P021-B",
+      "product": "BaseCell 2.0kWh Industrial",
+      "regulation": "Battery Regulation — industrial battery passport (deadline 18 Feb 2027) [Regulation (EU) 2023/1542, Article 77]",
+      "requirement": "Industrial batteries with a capacity > 2 kWh placed on the EU market on or after 18 February 2027 must carry a digital battery passport.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "gap": "Industrial battery (2048 Wh, BaseCell 2.0kWh Industrial) sold in the EU without a digital battery passport.",
+      "deadline": "2027-02-18",
+      "severity": "high",
+      "recommended_action": "Create and register the battery passport data carrier before the deadline.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "NomadPower Outdoor AB: BaseCell 2.0kWh Industrial — Battery gap by 2027-02-18. Create and register the battery passport data carrier before the deadline. Source: https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "PlayBright Toys S.r.l.",
+      "partner_id": "P008",
+      "product_id": "P008-A",
+      "product": "RoboPup Interactive Toy",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "RoboPup Interactive Toy is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "high",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "PlayBright Toys S.r.l.: RoboPup Interactive Toy — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "LumaNord Lighting GmbH",
+      "partner_id": "P001",
+      "product_id": "P001-A",
+      "product": "NordBeam LED Panel 600",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "NordBeam LED Panel 600 contains restricted heavy metal(s): lead. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "LumaNord Lighting GmbH: NordBeam LED Panel 600 — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.484Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "LumaNord Lighting GmbH",
+      "partner_id": "P001",
+      "product_id": "P001-B",
+      "product": "FlexGlow RGB Strip 5m",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "FlexGlow RGB Strip 5m contains SVHC(s) on ECHA Candidate List: DEHP. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "LumaNord Lighting GmbH: FlexGlow RGB Strip 5m — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.484Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "LumaNord Lighting GmbH",
+      "partner_id": "P001",
+      "product_id": "P001-B",
+      "product": "FlexGlow RGB Strip 5m",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "FlexGlow RGB Strip 5m contains restricted heavy metal(s): lead. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "LumaNord Lighting GmbH: FlexGlow RGB Strip 5m — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.484Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "SonicWave Audio SARL",
+      "partner_id": "P004",
+      "product_id": "P004-A",
+      "product": "WaveGo Bluetooth Speaker",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "WaveGo Bluetooth Speaker contains SVHC(s) on ECHA Candidate List: BPA. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "SonicWave Audio SARL: WaveGo Bluetooth Speaker — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "FitTrack Wearables AB",
+      "partner_id": "P006",
+      "product_id": "P006-A",
+      "product": "PulseBand Activity Tracker",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "PulseBand Activity Tracker contains SVHC(s) on ECHA Candidate List: PFAS_PFHxA. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "FitTrack Wearables AB: PulseBand Activity Tracker — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "FitTrack Wearables AB",
+      "partner_id": "P006",
+      "product_id": "P006-A",
+      "product": "PulseBand Activity Tracker",
+      "regulation": "REACH restriction — PFHxA group (PFAS) in consumer articles [Regulation (EC) 1907/2006, Annex XVII — Entry on PFHxA group]",
+      "requirement": "The PFHxA group restriction (Annex XVII Entry 68) prohibits placing on the EU market consumer articles containing PFHxA and its salts/esters above 25 ppb.",
+      "source_url": "https://echa.europa.eu/registry-of-restriction-intentions/-/dislist/details/0b0236e185c8db23",
+      "gap": "PulseBand Activity Tracker contains PFAS/PFHxA coating/component. Restricted under REACH Annex XVII Entry 68 (≥25 ppb in consumer articles).",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Test water-repellent coatings/components for PFHxA; replace or obtain analytical proof below threshold.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "FitTrack Wearables AB: PulseBand Activity Tracker — REACH gap. Test water-repellent coatings/components for PFHxA; replace or obtain analytical Source: https://echa.europa.eu/registry-of-restriction-intentions/-/dislist/details/0b0236e185c8db23"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "MediBand Health AG",
+      "partner_id": "P007",
+      "product_id": "P007-A",
+      "product": "CardioPatch Monitor",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "CardioPatch Monitor contains restricted heavy metal(s): lead. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "MediBand Health AG: CardioPatch Monitor — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "PlayBright Toys S.r.l.",
+      "partner_id": "P008",
+      "product_id": "P008-A",
+      "product": "RoboPup Interactive Toy",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "RoboPup Interactive Toy contains SVHC(s) on ECHA Candidate List: DEHP. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "PlayBright Toys S.r.l.: RoboPup Interactive Toy — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "PlayBright Toys S.r.l.",
+      "partner_id": "P008",
+      "product_id": "P008-B",
+      "product": "SingAlong Karaoke Mic",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "SingAlong Karaoke Mic contains SVHC(s) on ECHA Candidate List: DEHP. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "PlayBright Toys S.r.l.: SingAlong Karaoke Mic — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "CableMax Connect S.L.",
+      "partner_id": "P009",
+      "product_id": "P009-A",
+      "product": "UltraLink USB-C Cable 2m",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "UltraLink USB-C Cable 2m contains SVHC(s) on ECHA Candidate List: DEHP, MCCP. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "CableMax Connect S.L.: UltraLink USB-C Cable 2m — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "CableMax Connect S.L.",
+      "partner_id": "P009",
+      "product_id": "P009-A",
+      "product": "UltraLink USB-C Cable 2m",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "UltraLink USB-C Cable 2m contains restricted heavy metal(s): lead. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "CableMax Connect S.L.: UltraLink USB-C Cable 2m — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "DisplayOne Visuals GmbH",
+      "partner_id": "P010",
+      "product_id": "P010-B",
+      "product": "Legacy CCFL Panel (spare)",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "Legacy CCFL Panel (spare) contains restricted heavy metal(s): mercury. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "DisplayOne Visuals GmbH: Legacy CCFL Panel (spare) — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "GridSense IoT BV",
+      "partner_id": "P011",
+      "product_id": "P011-A",
+      "product": "EdgeNode Industrial Module",
+      "regulation": "POPs — decabromodiphenyl ether (decaBDE) restriction in EEE [Regulation (EU) 2019/1021, Annex I]",
+      "requirement": "DecaBDE (decabromodiphenyl ether) is listed in the POPs Regulation Annex I.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2019/1021/oj",
+      "gap": "EdgeNode Industrial Module contains decaBDE flame retardant, which is prohibited under the POPs Regulation (>10 mg/kg in articles).",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Replace decaBDE flame retardants with compliant alternatives and update test reports.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "GridSense IoT BV: EdgeNode Industrial Module — POPs gap. Replace decaBDE flame retardants with compliant alternatives and update test rep Source: https://eur-lex.europa.eu/eli/reg/2019/1021/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "SolarMicro Tech S.L.",
+      "partner_id": "P012",
+      "product_id": "P012-A",
+      "product": "SunLink Micro-Inverter",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "SunLink Micro-Inverter contains restricted heavy metal(s): cadmium. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "SolarMicro Tech S.L.: SunLink Micro-Inverter — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "AeroSense Drones SARL",
+      "partner_id": "P017",
+      "product_id": "P017-A",
+      "product": "SkyScout Camera Drone",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "SkyScout Camera Drone contains SVHC(s) on ECHA Candidate List: PFAS_PFHxA. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "AeroSense Drones SARL: SkyScout Camera Drone — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "AeroSense Drones SARL",
+      "partner_id": "P017",
+      "product_id": "P017-A",
+      "product": "SkyScout Camera Drone",
+      "regulation": "REACH restriction — PFHxA group (PFAS) in consumer articles [Regulation (EC) 1907/2006, Annex XVII — Entry on PFHxA group]",
+      "requirement": "The PFHxA group restriction (Annex XVII Entry 68) prohibits placing on the EU market consumer articles containing PFHxA and its salts/esters above 25 ppb.",
+      "source_url": "https://echa.europa.eu/registry-of-restriction-intentions/-/dislist/details/0b0236e185c8db23",
+      "gap": "SkyScout Camera Drone contains PFAS/PFHxA coating/component. Restricted under REACH Annex XVII Entry 68 (≥25 ppb in consumer articles).",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Test water-repellent coatings/components for PFHxA; replace or obtain analytical proof below threshold.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "AeroSense Drones SARL: SkyScout Camera Drone — REACH gap. Test water-repellent coatings/components for PFHxA; replace or obtain analytical Source: https://echa.europa.eu/registry-of-restriction-intentions/-/dislist/details/0b0236e185c8db23"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "GlowToys Junior Sp. z o.o.",
+      "partner_id": "P019",
+      "product_id": "P019-A",
+      "product": "StarLite Night Toy",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "StarLite Night Toy contains SVHC(s) on ECHA Candidate List: DEHP. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "GlowToys Junior Sp. z o.o.: StarLite Night Toy — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "GlowToys Junior Sp. z o.o.",
+      "partner_id": "P019",
+      "product_id": "P019-A",
+      "product": "StarLite Night Toy",
+      "regulation": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium [Directive 2011/65/EU, Annex II]",
+      "requirement": "EEE placed on the EU market must not contain lead >0.",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "gap": "StarLite Night Toy contains restricted heavy metal(s): lead. Must be below RoHS threshold or hold a valid documented exemption.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "GlowToys Junior Sp. z o.o.: StarLite Night Toy — RoHS gap. All EU-market EEE must be below threshold or hold a valid documented exemption. Source: https://eur-lex.europa.eu/eli/dir/2011/65/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "GlowToys Junior Sp. z o.o.",
+      "partner_id": "P019",
+      "product_id": "P019-B",
+      "product": "MelodyPlush Toy",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "MelodyPlush Toy contains SVHC(s) on ECHA Candidate List: DEHP. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "GlowToys Junior Sp. z o.o.: MelodyPlush Toy — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "ThermoControl Industrie GmbH",
+      "partner_id": "P020",
+      "product_id": "P020-A",
+      "product": "IndusTherm Controller",
+      "regulation": "POPs — decabromodiphenyl ether (decaBDE) restriction in EEE [Regulation (EU) 2019/1021, Annex I]",
+      "requirement": "DecaBDE (decabromodiphenyl ether) is listed in the POPs Regulation Annex I.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2019/1021/oj",
+      "gap": "IndusTherm Controller contains decaBDE flame retardant, which is prohibited under the POPs Regulation (>10 mg/kg in articles).",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Replace decaBDE flame retardants with compliant alternatives and update test reports.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "ThermoControl Industrie GmbH: IndusTherm Controller — POPs gap. Replace decaBDE flame retardants with compliant alternatives and update test rep Source: https://eur-lex.europa.eu/eli/reg/2019/1021/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "ThermoControl Industrie GmbH",
+      "partner_id": "P020",
+      "product_id": "P020-B",
+      "product": "FlowMeter Industrial",
+      "regulation": "POPs — decabromodiphenyl ether (decaBDE) restriction in EEE [Regulation (EU) 2019/1021, Annex I]",
+      "requirement": "DecaBDE (decabromodiphenyl ether) is listed in the POPs Regulation Annex I.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2019/1021/oj",
+      "gap": "FlowMeter Industrial contains decaBDE flame retardant, which is prohibited under the POPs Regulation (>10 mg/kg in articles).",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Replace decaBDE flame retardants with compliant alternatives and update test reports.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "ThermoControl Industrie GmbH: FlowMeter Industrial — POPs gap. Replace decaBDE flame retardants with compliant alternatives and update test rep Source: https://eur-lex.europa.eu/eli/reg/2019/1021/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-A",
+      "product": "LittleView Baby Monitor",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "LittleView Baby Monitor contains SVHC(s) on ECHA Candidate List: BPA. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: LittleView Baby Monitor — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-A",
+      "product": "LittleView Baby Monitor",
+      "regulation": "REACH SVHC — Bisphenol A (BPA) communication and SCIP registration [Regulation (EC) 1907/2006, Article 59 — SVHC (BPA)]",
+      "requirement": "Bisphenol A (BPA) is on the SVHC Candidate List.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "LittleView Baby Monitor contains BPA (REACH SVHC). Must be notified in ECHA SCIP database and customers informed on request.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Register in ECHA SCIP database; inform downstream users/consumers of BPA presence on request.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: LittleView Baby Monitor — REACH gap. Register in ECHA SCIP database; inform downstream users/consumers of BPA presenc Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": true,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-B",
+      "product": "KidCam Watch",
+      "regulation": "ECHA SVHC Candidate List (? substances as of 2026-06-26) [Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List]",
+      "requirement": "The SVHC Candidate List is updated twice yearly.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "KidCam Watch contains SVHC(s) on ECHA Candidate List: BPA. REACH Art. 33 communication + SCIP notification required.",
+      "deadline": null,
+      "severity": "high",
+      "recommended_action": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: KidCam Watch — REACH gap. Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Ca Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "LumaNord Lighting GmbH",
+      "partner_id": "P001",
+      "product_id": "P001-B",
+      "product": "FlexGlow RGB Strip 5m",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "FlexGlow RGB Strip 5m is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "medium",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "LumaNord Lighting GmbH: FlexGlow RGB Strip 5m — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.484Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "CellCore Energy Sp. z o.o.",
+      "partner_id": "P003",
+      "product_id": "P003-C",
+      "product": "CoinCell CR2032 10-pack",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "CoinCell CR2032 10-pack is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "medium",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "sms",
+        "to": "__ALERT_TARGET__",
+        "message": "CellCore Energy Sp. z o.o.: CoinCell CR2032 10-pack — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "CableMax Connect S.L.",
+      "partner_id": "P009",
+      "product_id": "P009-A",
+      "product": "UltraLink USB-C Cable 2m",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "UltraLink USB-C Cable 2m is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "medium",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "CableMax Connect S.L.: UltraLink USB-C Cable 2m — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "BrewEasy Appliances S.r.l.",
+      "partner_id": "P015",
+      "product_id": "P015-A",
+      "product": "QuickBoil Kettle 1.7L",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "QuickBoil Kettle 1.7L is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "medium",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "BrewEasy Appliances S.r.l.: QuickBoil Kettle 1.7L — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "PureAir Devices BV",
+      "partner_id": "P018",
+      "product_id": "P018-A",
+      "product": "FreshFlow Air Purifier",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "FreshFlow Air Purifier is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "medium",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "PureAir Devices BV: FreshFlow Air Purifier — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "PureAir Devices BV",
+      "partner_id": "P018",
+      "product_id": "P018-B",
+      "product": "DryAir Dehumidifier",
+      "regulation": "PPWR — plastic film / single-use packaging restrictions [Regulation (EU) 2025/40 — Packaging and Packaging Waste]",
+      "requirement": "The new PPWR entered into force in February 2025.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "gap": "DryAir Dehumidifier is packaged in plastic film; PPWR requires phase-out or recycled-content/recyclability compliance.",
+      "deadline": "2028-01-01",
+      "severity": "medium",
+      "recommended_action": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "PureAir Devices BV: DryAir Dehumidifier — PPWR gap by 2028-01-01. Audit product packaging; replace plastic film with compliant alternatives or doc Source: https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "EUR-Lex"
+      }
+    },
+    {
+      "company": "SonicWave Audio SARL",
+      "partner_id": "P004",
+      "product_id": "P004-A",
+      "product": "WaveGo Bluetooth Speaker",
+      "regulation": "REACH SVHC — Bisphenol A (BPA) communication and SCIP registration [Regulation (EC) 1907/2006, Article 59 — SVHC (BPA)]",
+      "requirement": "Bisphenol A (BPA) is on the SVHC Candidate List.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "WaveGo Bluetooth Speaker contains BPA (REACH SVHC). Must be notified in ECHA SCIP database and customers informed on request.",
+      "deadline": null,
+      "severity": "medium",
+      "recommended_action": "Register in ECHA SCIP database; inform downstream users/consumers of BPA presence on request.",
+      "alert": {
+        "channel": "whatsapp",
+        "to": "__ALERT_TARGET__",
+        "message": "SonicWave Audio SARL: WaveGo Bluetooth Speaker — REACH gap. Register in ECHA SCIP database; inform downstream users/consumers of BPA presenc Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    },
+    {
+      "company": "KidVision Cams SARL",
+      "partner_id": "P022",
+      "product_id": "P022-B",
+      "product": "KidCam Watch",
+      "regulation": "REACH SVHC — Bisphenol A (BPA) communication and SCIP registration [Regulation (EC) 1907/2006, Article 59 — SVHC (BPA)]",
+      "requirement": "Bisphenol A (BPA) is on the SVHC Candidate List.",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "gap": "KidCam Watch contains BPA (REACH SVHC). Must be notified in ECHA SCIP database and customers informed on request.",
+      "deadline": null,
+      "severity": "medium",
+      "recommended_action": "Register in ECHA SCIP database; inform downstream users/consumers of BPA presence on request.",
+      "alert": {
+        "channel": "email",
+        "to": "__ALERT_TARGET__",
+        "message": "KidVision Cams SARL: KidCam Watch — REACH gap. Register in ECHA SCIP database; inform downstream users/consumers of BPA presenc Source: https://echa.europa.eu/candidate-list-table"
+      },
+      "_meta": {
+        "known_gap_confirmed": false,
+        "assessed_at": "2026-06-26T10:26:54.485Z",
+        "rule_source": "ECHA"
+      }
+    }
+  ]
+}

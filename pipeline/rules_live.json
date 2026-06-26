@@ -1,0 +1,304 @@
+{
+  "_comment": "Live + static EU regulatory rules fetched by fetch_rules.js. Consumed by assess_gaps.js to detect portfolio gaps.",
+  "fetched_at": "2026-06-26T10:26:45.807Z",
+  "rule_count": 11,
+  "rules": [
+    {
+      "update_id": "LIVE-ECHA-SVHC",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "ECHA",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "regulation_family": "REACH",
+      "reference": "Regulation (EC) 1907/2006, Article 59 — SVHC Candidate List",
+      "title": "ECHA SVHC Candidate List (? substances as of 2026-06-26)",
+      "summary": "The SVHC Candidate List is updated twice yearly. Substances of Very High Concern above 0.1 % w/w in articles trigger REACH Article 33 communication duties. Current SVHC in this portfolio: BPA (Bisphenol A), DEHP, DBP, BBP (phthalates), PFAS_PFHxA.",
+      "change_type": "live_fetch",
+      "effective_date": null,
+      "deadline_date": null,
+      "severity": "high",
+      "action_required": "Check all products containing BPA, DEHP, DBP, BBP, PFAS_PFHxA against current Candidate List; communicate SVHC presence to customers/ECHA SCIP database.",
+      "scope": {
+        "categories": "all",
+        "substances": [
+          "BPA",
+          "DEHP",
+          "DBP",
+          "BBP",
+          "PFAS_PFHxA",
+          "MCCP"
+        ],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "Applies when SVHC concentration ≥ 0.1 % w/w in any article placed on the EU market."
+      }
+    },
+    {
+      "update_id": "STATIC-ROHS-HEAVYMETALS",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+      "regulation_family": "RoHS",
+      "reference": "Directive 2011/65/EU, Annex II",
+      "title": "RoHS — restriction of lead, mercury, cadmium, hexavalent chromium",
+      "summary": "EEE placed on the EU market must not contain lead >0.1 %, mercury >0.1 %, cadmium >0.01 %, hexavalent chromium >0.1 % by weight in homogeneous materials. Exemptions exist for specific medical and industrial uses but must be documented.",
+      "change_type": "in_force",
+      "effective_date": "2011-07-21",
+      "deadline_date": null,
+      "severity": "high",
+      "action_required": "All EU-market EEE must be below threshold or hold a valid documented exemption.",
+      "scope": {
+        "categories": "all",
+        "substances": [
+          "lead",
+          "mercury",
+          "cadmium",
+          "hexavalent_chromium"
+        ],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "Covers consumer and industrial EEE. Medical devices and monitoring equipment have transitional exemptions."
+      }
+    },
+    {
+      "update_id": "STATIC-BATTERY-PASSPORT-LMT",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "regulation_family": "Battery",
+      "reference": "Regulation (EU) 2023/1542, Article 77",
+      "title": "Battery Regulation — LMT battery passport (deadline 18 Feb 2027)",
+      "summary": "Light-means-of-transport (LMT) batteries (e-bikes, e-scooters, etc.) placed on the EU market on or after 18 February 2027 must carry a digital battery passport with a data carrier (QR code) accessible from the battery surface.",
+      "change_type": "in_force",
+      "effective_date": "2023-08-17",
+      "deadline_date": "2027-02-18",
+      "severity": "high",
+      "action_required": "Create and register the battery passport data carrier before the deadline.",
+      "scope": {
+        "categories": [
+          "emobility_battery"
+        ],
+        "substances": [],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "battery_type == \"lmt\""
+      }
+    },
+    {
+      "update_id": "STATIC-BATTERY-PASSPORT-INDUSTRIAL",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "regulation_family": "Battery",
+      "reference": "Regulation (EU) 2023/1542, Article 77",
+      "title": "Battery Regulation — industrial battery passport (deadline 18 Feb 2027)",
+      "summary": "Industrial batteries with a capacity > 2 kWh placed on the EU market on or after 18 February 2027 must carry a digital battery passport.",
+      "change_type": "in_force",
+      "effective_date": "2023-08-17",
+      "deadline_date": "2027-02-18",
+      "severity": "high",
+      "action_required": "Create and register the battery passport data carrier before the deadline.",
+      "scope": {
+        "categories": [
+          "battery_pack"
+        ],
+        "substances": [],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "battery_type == \"industrial\" AND battery_capacity_wh > 2000"
+      }
+    },
+    {
+      "update_id": "STATIC-RED-USBC-CHARGER",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302553",
+      "regulation_family": "RED",
+      "reference": "Directive 2014/53/EU, amended by Delegated Regulation (EU) 2022/2380 — common charger",
+      "title": "RED — USB-C common charger mandatory for portable consumer electronics",
+      "summary": "From 28 December 2024, small portable consumer electronics (phones, tablets, cameras, headphones, portable speakers, handheld game consoles, e-readers) sold in the EU must use USB-C for wired charging. Laptops have until April 2026. Devices using micro-USB or proprietary connectors are no longer compliant.",
+      "change_type": "in_force",
+      "effective_date": "2024-12-28",
+      "deadline_date": "2024-12-28",
+      "severity": "high",
+      "action_required": "Replace micro-USB or proprietary charging ports with USB-C on all in-scope products.",
+      "scope": {
+        "categories": [
+          "audio",
+          "wearable",
+          "smart_home",
+          "battery_pack",
+          "power_supply"
+        ],
+        "substances": [],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "Consumer portable device with wired charging. connector IN [\"micro_usb\", \"lightning\", \"barrel\"] is non-compliant."
+      }
+    },
+    {
+      "update_id": "STATIC-RED-CYBERSECURITY-EN18031",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2420",
+      "regulation_family": "RED",
+      "reference": "Directive 2014/53/EU Art. 3(3)(d)(e)(f) — Delegated Reg. (EU) 2022/30",
+      "title": "RED — cybersecurity requirements (EN 18031) for internet-connected devices",
+      "summary": "From 1 August 2025, internet-connected radio equipment (routers, smart-home hubs, wearables, IoT devices, cameras) must meet cybersecurity requirements under EN 18031 (network protection, access control, personal data). CE declaration must cover Art. 3(3)(d/e/f).",
+      "change_type": "in_force",
+      "effective_date": "2025-08-01",
+      "deadline_date": "2025-08-01",
+      "severity": "high",
+      "action_required": "Conduct EN 18031 conformity assessment and update DoC / technical file before August 2025.",
+      "scope": {
+        "categories": [
+          "smart_home",
+          "wearable",
+          "networking",
+          "iot_module",
+          "audio",
+          "drone"
+        ],
+        "substances": [],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "has_radio == true AND intended_use != \"industrial\""
+      }
+    },
+    {
+      "update_id": "STATIC-PPWR-PLASTIC-PACKAGING",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj",
+      "regulation_family": "PPWR",
+      "reference": "Regulation (EU) 2025/40 — Packaging and Packaging Waste",
+      "title": "PPWR — plastic film / single-use packaging restrictions",
+      "summary": "The new PPWR entered into force in February 2025. Products packaged in plastic film (single-use flexible plastic) for direct consumer sale must phase out such packaging or ensure it meets recycled-content and recyclability targets. Labelling requirements under Art. 11 apply from 2028.",
+      "change_type": "in_force",
+      "effective_date": "2025-02-12",
+      "deadline_date": "2028-01-01",
+      "severity": "medium",
+      "action_required": "Audit product packaging; replace plastic film with compliant alternatives or document recycled-content compliance.",
+      "scope": {
+        "categories": "all",
+        "substances": [],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "packaging INCLUDES \"plastic_film\""
+      }
+    },
+    {
+      "update_id": "STATIC-POPS-DECABDE",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2019/1021/oj",
+      "regulation_family": "POPs",
+      "reference": "Regulation (EU) 2019/1021, Annex I",
+      "title": "POPs — decabromodiphenyl ether (decaBDE) restriction in EEE",
+      "summary": "DecaBDE (decabromodiphenyl ether) is listed in the POPs Regulation Annex I. Its manufacture, use, and placing on the market in concentrations above 10 mg/kg in articles is prohibited. EEE containing decaBDE in flame-retardant components is non-compliant and must be reformulated.",
+      "change_type": "in_force",
+      "effective_date": "2019-07-15",
+      "deadline_date": null,
+      "severity": "high",
+      "action_required": "Replace decaBDE flame retardants with compliant alternatives and update test reports.",
+      "scope": {
+        "categories": "all",
+        "substances": [
+          "decaBDE"
+        ],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "Product contains decaBDE above 10 mg/kg in any article."
+      }
+    },
+    {
+      "update_id": "STATIC-BATTERY-BUTTONCELL-CHILDSAFETY",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "EUR-Lex",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+      "regulation_family": "Battery",
+      "reference": "Regulation (EU) 2023/1542, Article 12 — button cell child safety",
+      "title": "Battery Regulation — button cell compartments must be child-safe (Aug 2026)",
+      "summary": "From 18 August 2026, consumer appliances containing button-cell or coin batteries must have battery compartments that are not accessible to children without a tool or two simultaneous actions. Required warning labelling on product and packaging.",
+      "change_type": "in_force",
+      "effective_date": "2023-08-17",
+      "deadline_date": "2026-08-18",
+      "severity": "high",
+      "action_required": "Redesign battery compartment closure (tool/double-action lock) and add required warning label.",
+      "scope": {
+        "categories": [
+          "toy_electronic",
+          "smart_home",
+          "wearable",
+          "audio"
+        ],
+        "substances": [],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "battery_type == \"button_cell\" AND intended_use IN [\"consumer\",\"toy\"]"
+      }
+    },
+    {
+      "update_id": "STATIC-REACH-PFAS-PFHXA",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "ECHA",
+      "source_url": "https://echa.europa.eu/registry-of-restriction-intentions/-/dislist/details/0b0236e185c8db23",
+      "regulation_family": "REACH",
+      "reference": "Regulation (EC) 1907/2006, Annex XVII — Entry on PFHxA group",
+      "title": "REACH restriction — PFHxA group (PFAS) in consumer articles",
+      "summary": "The PFHxA group restriction (Annex XVII Entry 68) prohibits placing on the EU market consumer articles containing PFHxA and its salts/esters above 25 ppb. Water-repellent coatings in wearables, textiles and outdoor products are the primary targets.",
+      "change_type": "in_force",
+      "effective_date": "2023-02-25",
+      "deadline_date": null,
+      "severity": "high",
+      "action_required": "Test water-repellent coatings/components for PFHxA; replace or obtain analytical proof below threshold.",
+      "scope": {
+        "categories": [
+          "wearable",
+          "drone",
+          "smart_home"
+        ],
+        "substances": [
+          "PFAS_PFHxA"
+        ],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "Consumer article with PFAS_PFHxA coating or component. Threshold: 25 ppb."
+      }
+    },
+    {
+      "update_id": "STATIC-REACH-BPA",
+      "fetched_at": "2026-06-26T10:26:45.807Z",
+      "source": "ECHA",
+      "source_url": "https://echa.europa.eu/candidate-list-table",
+      "regulation_family": "REACH",
+      "reference": "Regulation (EC) 1907/2006, Article 59 — SVHC (BPA)",
+      "title": "REACH SVHC — Bisphenol A (BPA) communication and SCIP registration",
+      "summary": "Bisphenol A (BPA) is on the SVHC Candidate List. Articles containing BPA above 0.1 % w/w must be notified in the ECHA SCIP database and customers must be informed upon request. BPA is also restricted in certain thermal paper and food contact applications.",
+      "change_type": "in_force",
+      "effective_date": "2017-01-12",
+      "deadline_date": null,
+      "severity": "medium",
+      "action_required": "Register in ECHA SCIP database; inform downstream users/consumers of BPA presence on request.",
+      "scope": {
+        "categories": "all",
+        "substances": [
+          "BPA"
+        ],
+        "markets": [
+          "EU"
+        ],
+        "conditions": "BPA concentration ≥ 0.1 % w/w in any article."
+      }
+    }
+  ]
+}

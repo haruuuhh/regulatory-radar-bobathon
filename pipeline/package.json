@@ -1,0 +1,22 @@
+{
+  "name": "regulatory-radar-pipeline",
+  "version": "1.0.0",
+  "description": "Regulatory Radar — EU compliance gap detection + Twilio alerts",
+  "type": "module",
+  "main": "pipeline.js",
+  "scripts": {
+    "fetch":  "node fetch_rules.js",
+    "assess": "node assess_gaps.js",
+    "alert":  "node alert.js",
+    "run":    "node pipeline.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "twilio":     "^5.3.3",
+    "dotenv":     "^16.4.5",
+    "fast-xml-parser": "^4.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
