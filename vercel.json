@@ -1,10 +1,20 @@
 {
   "version": 2,
   "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
     { "src": "pipeline/dashboard.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/", "dest": "/pipeline/dashboard.html" },
-    { "src": "/dashboard", "dest": "/pipeline/dashboard.html" }
-  ]
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/upload", "dest": "/pipeline/upload.html" },
+    { "src": "/dashboard", "dest": "/pipeline/dashboard.html" },
+    { "src": "/", "dest": "/pipeline/dashboard.html" }
+  ],
+  "env": {
+    "TWILIO_ACCOUNT_SID": "@twilio_account_sid",
+    "TWILIO_AUTH_TOKEN": "@twilio_auth_token",
+    "TWILIO_FROM_SMS": "@twilio_from_sms",
+    "TWILIO_FROM_WHATSAPP": "@twilio_from_whatsapp",
+    "ALERT_TARGET_PHONE": "@alert_target_phone"
+  }
 }
